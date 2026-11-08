@@ -1,0 +1,1687 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日大赛91-赛事类型_通勤观赛_每日大赛91与同类对比</title>
+  <meta name="description" content="每日大赛91是聚焦每日竞赛内容聚合与观赛入口的门户型页面，提供赛程分类、热门推荐、深度解析与体验指南，适合偏好每日更新和实时赛事追踪的观众浏览。">
+  <meta name="keywords" content="每日赛程,竞赛聚合,观赛入口,赛事推荐,每日更新">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231e2a4a'/%3E%3Cpath d='M8 10h16v2H8zm0 5h12v2H8zm0 5h16v2H8z' fill='%23ffb347'/%3E%3Ccircle cx='24' cy='12' r='3' fill='%23ff8c42'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --bg-page: #f5f7fc;
+      --bg-card: #ffffff;
+      --bg-panel: #f0f4ff;
+      --bg-sticky: rgba(255, 255, 255, 0.92);
+      --text-primary: #1e2a4a;
+      --text-secondary: #4a5a7a;
+      --text-muted: #7a8aaa;
+      --accent: #ff8c42;
+      --accent-soft: #ffe6d5;
+      --accent-dark: #d96f2e;
+      --blue-accent: #3a6ea5;
+      --blue-soft: #e0ecff;
+      --border-light: #dce4f0;
+      --border-medium: #b8c8e0;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-card: 0 4px 12px rgba(30, 42, 74, 0.06);
+      --shadow-sticky: 0 2px 12px rgba(30, 42, 74, 0.08);
+      --font-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      --announce-height: 40px;
+      --header-height: 64px;
+      --nav-height: 48px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--announce-height) + var(--header-height) + var(--nav-height) + 12px);
+    }
+
+    body {
+      font-family: var(--font-base);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* 公告条 & 页头吸顶容器 */
+    .sticky-group {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-sticky);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-sticky);
+    }
+
+    .announcement-bar {
+      height: var(--announce-height);
+      background: linear-gradient(90deg, #1e2a4a, #2a3a5e);
+      color: #ffd9b0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      padding: 0 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    .announcement-bar span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .site-header {
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .brand-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-panel);
+      border-radius: 48px;
+      padding: 6px 14px;
+      border: 1px solid var(--border-light);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      padding: 4px 8px;
+      font-size: 0.9rem;
+      width: 160px;
+      outline: none;
+      color: var(--text-primary);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-box button {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 48px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .search-box button:hover {
+      background: var(--accent-dark);
+    }
+
+    .header-fav {
+      font-size: 0.85rem;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 6px 14px;
+      border-radius: 48px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* 频道导航 */
+    .channel-nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      height: var(--nav-height);
+    }
+
+    .nav-inner a {
+      padding: 6px 14px;
+      border-radius: 32px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+
+    .nav-inner a:hover {
+      background: var(--blue-soft);
+      color: var(--blue-accent);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #1e2a4a 0%, #2a3a5e 60%, #3a5a8a 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+    }
+
+    .hero-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: #d0def0;
+      max-width: 600px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 48px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.15s;
+    }
+
+    .hero-btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .hero-btn-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .hero-btn-outline {
+      border: 1.5px solid rgba(255, 255, 255, 0.6);
+      color: #fff;
+    }
+
+    .hero-btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-visual {
+      flex: 0 0 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+    }
+
+    /* 三栏容器 */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 32px 24px 40px;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 240px;
+      gap: 32px;
+    }
+
+    /* 左栏 */
+    .left-sidebar {
+      font-size: 0.9rem;
+    }
+
+    .sidebar-section {
+      margin-bottom: 28px;
+    }
+
+    .sidebar-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sidebar-links a {
+      display: block;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+
+    .sidebar-links a:hover {
+      background: var(--blue-soft);
+      color: var(--blue-accent);
+    }
+
+    .filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .filter-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 32px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .filter-tag:hover,
+    .filter-tag.active {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+
+    /* 中栏 */
+    .main-content {
+      min-width: 0;
+    }
+
+    .content-section {
+      margin-bottom: 40px;
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .content-card {
+      background: var(--bg-panel);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      transition: all 0.15s;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      border-color: var(--border-medium);
+      box-shadow: 0 2px 8px rgba(30, 42, 74, 0.06);
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      background: var(--blue-soft);
+      border-radius: 32px;
+      color: var(--blue-accent);
+      font-weight: 500;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 8px;
+      flex: 1;
+    }
+
+    .card-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* 紧凑列表 */
+    .compact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .compact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .compact-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .compact-index {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--accent);
+      min-width: 28px;
+      text-align: center;
+    }
+
+    .compact-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .compact-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .compact-summary {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--bg-panel);
+      border-radius: var(--radius-sm);
+      padding: 14px 10px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      transition: all 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .category-item:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 20px 0 8px;
+      color: var(--text-primary);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      line-height: 1.7;
+      max-width: 72ch;
+    }
+
+    .deep-dive ul {
+      margin: 8px 0 16px 20px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      list-style: disc;
+    }
+
+    .deep-dive li {
+      margin-bottom: 4px;
+    }
+
+    /* 指南步骤 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      counter-reset: step;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 12px 16px;
+      background: var(--bg-panel);
+      border-radius: var(--radius-sm);
+      counter-increment: step;
+    }
+
+    .guide-step::before {
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .guide-step-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .guide-step-text strong {
+      color: var(--text-primary);
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    details {
+      background: var(--bg-panel);
+      border-radius: var(--radius-sm);
+      padding: 2px 0;
+      border: 1px solid var(--border-light);
+    }
+
+    summary {
+      padding: 12px 16px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-primary);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: transform 0.15s;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-answer {
+      padding: 0 16px 14px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 520px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .comment-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .comment-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--blue-soft);
+      color: var(--blue-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .comment-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .comment-name {
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .comment-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      min-width: 70px;
+      padding-top: 2px;
+    }
+
+    .news-body {
+      flex: 1;
+    }
+
+    .news-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .news-summary {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* 推荐标签索引 */
+    .tag-index {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-index a {
+      display: inline-block;
+      padding: 8px 14px;
+      background: var(--bg-panel);
+      border-radius: 32px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      border: 1px solid var(--border-light);
+      transition: all 0.15s;
+    }
+
+    .tag-index a:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent-dark);
+    }
+
+    /* 精选引语 */
+    .quote-block {
+      background: var(--bg-panel);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .quote-source {
+      margin-top: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* 右栏 */
+    .right-sidebar {
+      font-size: 0.88rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc-list a {
+      display: block;
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-size: 0.84rem;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+    }
+
+    .toc-list a:hover {
+      background: var(--blue-soft);
+      border-left-color: var(--blue-accent);
+      color: var(--blue-accent);
+    }
+
+    .hot-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hot-item {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .hot-rank {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: var(--bg-panel);
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .hot-rank.top {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .hot-name {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: #1e2a4a;
+      color: #c0ccdf;
+      padding: 40px 24px 24px;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    .footer-brand h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #a0b0cc;
+      max-width: 300px;
+    }
+
+    .footer-col h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #8899bb;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 0.85rem;
+      color: #c0ccdf;
+      padding: 3px 0;
+      transition: color 0.15s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      max-width: 1440px;
+      margin: 32px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid #2a3a5e;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #7a8aaa;
+    }
+
+    /* 搜索结果提示 */
+    .search-feedback {
+      display: none;
+      padding: 12px 16px;
+      background: var(--bg-panel);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .search-feedback.visible {
+      display: block;
+    }
+
+    /* 移动端 */
+    @media (max-width: 1024px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .left-sidebar,
+      .right-sidebar {
+        display: none;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero-visual {
+        display: none;
+      }
+      .site-header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px 16px;
+        gap: 8px;
+      }
+      .search-box input {
+        width: 100px;
+      }
+      .container {
+        padding: 16px 12px;
+      }
+      .content-section {
+        padding: 16px;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-inner {
+        padding: 0 12px;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .hidden-by-search {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- 吸顶组：公告条 + 页头 + 频道导航 -->
+  <div class="sticky-group">
+    <div class="announcement-bar">
+      <span>📢 每日大赛91 · 本周新增「城市竞速」与「逻辑迷宫」赛程，深夜场观赛入口已开放</span>
+    </div>
+
+    <header class="site-header">
+      <div class="brand-area">
+        <svg class="brand-logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#1e2a4a"/>
+          <path d="M8 10h16v2H8zm0 5h12v2H8zm0 5h16v2H8z" fill="#ffb347"/>
+          <circle cx="24" cy="12" r="3" fill="#ff8c42"/>
+        </svg>
+        <span class="brand-text">每日大赛91</span>
+      </div>
+      <div class="header-actions">
+        <div class="search-box" role="search">
+          <input type="text" id="searchInput" placeholder="搜索赛程、类型…" aria-label="搜索赛程内容">
+          <button id="searchBtn" aria-label="搜索">搜索</button>
+        </div>
+        <a href="/#hot-recommend" class="header-fav">🔥 今日热门</a>
+      </div>
+    </header>
+
+    <nav class="channel-nav" aria-label="频道导航">
+      <div class="nav-inner">
+        <a href="/#intro">简介</a>
+        <a href="/#hot-recommend">热门推荐</a>
+        <a href="/#latest-updates">最新动态</a>
+        <a href="/#category-entry">分类入口</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#experience-guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#user-comments">用户评论</a>
+        <a href="/#related-news">相关资讯</a>
+        <a href="/#tag-index">方向索引</a>
+        <a href="/#editor-pick">精选内容</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>每日大赛91</h1>
+        <p class="hero-desc">聚合每日竞赛内容与观赛入口，覆盖竞速挑战、逻辑解谜、团队对抗等方向。按类型、时间、热度筛选，通勤或睡前都能找到当日可看的赛程。</p>
+        <div class="hero-actions">
+          <a href="/#hot-recommend" class="hero-btn hero-btn-primary">浏览今日推荐</a>
+          <a href="/#latest-updates" class="hero-btn hero-btn-outline">查看最新赛程</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 260 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="30" width="160" height="100" rx="12" fill="#2a3a5e" stroke="#4a6a9a" stroke-width="1.5"/>
+          <rect x="34" y="48" width="60" height="8" rx="4" fill="#ffb347"/>
+          <rect x="34" y="64" width="100" height="6" rx="3" fill="#4a6a9a"/>
+          <rect x="34" y="78" width="80" height="6" rx="3" fill="#4a6a9a"/>
+          <rect x="34" y="92" width="40" height="6" rx="3" fill="#ff8c42"/>
+          <circle cx="200" cy="80" r="36" fill="#ff8c42" opacity="0.15"/>
+          <circle cx="200" cy="80" r="24" fill="#ff8c42" opacity="0.3"/>
+          <circle cx="200" cy="80" r="12" fill="#ffb347"/>
+          <rect x="140" y="130" width="100" height="50" rx="10" fill="#2a3a5e" stroke="#4a6a9a" stroke-width="1.5"/>
+          <rect x="152" y="144" width="40" height="6" rx="3" fill="#ffb347"/>
+          <rect x="152" y="158" width="60" height="5" rx="2.5" fill="#4a6a9a"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主内容 -->
+  <div class="container">
+    <!-- 左栏 -->
+    <aside class="left-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">频道导航</div>
+        <ul class="sidebar-links">
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#hot-recommend">热门推荐</a></li>
+          <li><a href="/#latest-updates">最新动态</a></li>
+          <li><a href="/#category-entry">分类入口</a></li>
+          <li><a href="/#deep-dive">深度解析</a></li>
+          <li><a href="/#experience-guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">赛程类型</div>
+        <div class="filter-tags">
+          <button class="filter-tag active" data-filter="all">全部</button>
+          <button class="filter-tag" data-filter="竞速">竞速挑战</button>
+          <button class="filter-tag" data-filter="解谜">逻辑解谜</button>
+          <button class="filter-tag" data-filter="团队">团队对抗</button>
+          <button class="filter-tag" data-filter="技巧">技巧展示</button>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">观赛场景</div>
+        <div class="filter-tags">
+          <span class="filter-tag">通勤观赛</span>
+          <span class="filter-tag">睡前放松</span>
+          <span class="filter-tag">午间速看</span>
+          <span class="filter-tag">周末连看</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <main class="main-content">
+      <!-- 搜索反馈 -->
+      <div id="searchFeedback" class="search-feedback" role="status" aria-live="polite"></div>
+
+      <!-- 1. 内容简介 -->
+      <section id="intro" class="content-section">
+        <h2 class="section-title">内容简介</h2>
+        <p>每日大赛91是一个围绕每日竞赛内容进行聚合与整理的页面，它把分散在不同方向的赛程信息按类型、时间与热度重新组织，方便观众快速找到当天可看的竞赛条目。这里覆盖竞速挑战、逻辑解谜、团队对抗以及技巧展示等多个类别，每一条赛程都附带简短看点与参与方式说明，让你不必在多个入口之间来回跳转。</p>
+        <p>对于习惯通勤时刷一局、午间休息看一段、或者睡前放松追更的观众来说，这个页面更像一个按日更新的赛程索引。你可以按「竞速」「解谜」「团队」等类型筛选，也可以直接浏览热门推荐与最新动态。页面不强调实时比分或专业数据面板，而是把重点放在“今天有什么可看”“哪个方向适合我”“大概多久更新一次”这类日常决策上。</p>
+        <p>如果你正在比较不同竞赛方向的特点，或者想知道每日大赛91与同类赛程聚合页的差异，深度解析与常见问题板块提供了更细的说明。页面中的赛程名称、热度、评论与推荐均以示例形式呈现，用于展示内容组织方式，不构成真实排名或数据背书。</p>
+      </section>
+
+      <!-- 2. 热门内容推荐 -->
+      <section id="hot-recommend" class="content-section">
+        <h2 class="section-title">热门内容推荐</h2>
+        <p class="section-sub">按近期关注度与更新频率综合排列，供快速挑选。</p>
+        <div class="card-grid" id="hotCardGrid">
+          <div class="content-card" data-type="竞速">
+            <div class="card-title">城市环线竞速夜场</div>
+            <div class="card-tags">
+              <span class="card-tag">竞速挑战</span>
+              <span class="card-tag">夜间赛程</span>
+              <span class="card-tag">每日更新</span>
+            </div>
+            <div class="card-desc">连续弯道与短直道交替，适合喜欢节奏变化的观众，单场约15分钟。</div>
+            <div class="card-meta"><span>热度 9.2</span><span>今日 19:30</span></div>
+          </div>
+          <div class="content-card" data-type="解谜">
+            <div class="card-title">数字迷宫限时解谜</div>
+            <div class="card-tags">
+              <span class="card-tag">逻辑解谜</span>
+              <span class="card-tag">单人挑战</span>
+              <span class="card-tag">通勤可看</span>
+            </div>
+            <div class="card-desc">在网格中寻找隐藏路径，每局规则微调，适合午间速看或碎片时间。</div>
+            <div class="card-meta"><span>热度 8.7</span><span>今日 12:00</span></div>
+          </div>
+          <div class="content-card" data-type="团队">
+            <div class="card-title">三队接力对抗赛</div>
+            <div class="card-tags">
+              <span class="card-tag">团队对抗</span>
+              <span class="card-tag">周末连看</span>
+              <span class="card-tag">积分制</span>
+            </div>
+            <div class="card-desc">三支队伍轮换出场，积分累积决定最终排名，适合周末长时间观看。</div>
+            <div class="card-meta"><span>热度 8.9</span><span>周六 20:00</span></div>
+          </div>
+          <div class="content-card" data-type="技巧">
+            <div class="card-title">精准落点技巧展示</div>
+            <div class="card-tags">
+              <span class="card-tag">技巧展示</span>
+              <span class="card-tag">睡前放松</span>
+              <span class="card-tag">慢节奏</span>
+            </div>
+            <div class="card-desc">以慢镜头拆解落点控制与角度选择，节奏舒缓，适合睡前观看。</div>
+            <div class="card-meta"><span>热度 8.1</span><span>每日 22:00</span></div>
+          </div>
+          <div class="content-card" data-type="竞速">
+            <div class="card-title">山地速降计时赛</div>
+            <div class="card-tags">
+              <span class="card-tag">竞速挑战</span>
+              <span class="card-tag">计时制</span>
+              <span class="card-tag">高落差</span>
+            </div>
+            <div class="card-desc">连续陡坡与跳跃点组合，强调路线选择与刹车控制，单场约20分钟。</div>
+            <div class="card-meta"><span>热度 8.5</span><span>今日 16:00</span></div>
+          </div>
+          <div class="content-card" data-type="解谜">
+            <div class="card-title">逻辑链条接龙赛</div>
+            <div class="card-tags">
+              <span class="card-tag">逻辑解谜</span>
+              <span class="card-tag">多人同屏</span>
+              <span class="card-tag">短局制</span>
+            </div>
+            <div class="card-desc">每人依次接续逻辑链条，出错即淘汰，节奏紧凑，适合午间观看。</div>
+            <div class="card-meta"><span>热度 8.3</span><span>今日 13:00</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 / 动态 -->
+      <section id="latest-updates" class="content-section">
+        <h2 class="section-title">最新更新与热门动态</h2>
+        <div class="compact-list">
+          <div class="compact-item">
+            <div class="compact-index">01</div>
+            <div class="compact-body">
+              <div class="compact-name">「城市环线竞速」新增夜间赛段</div>
+              <div class="compact-summary">在原有路线基础上加入两段夜间照明区域，考验视线适应与节奏调整。</div>
+            </div>
+          </div>
+          <div class="compact-item">
+            <div class="compact-index">02</div>
+            <div class="compact-body">
+              <div class="compact-name">「数字迷宫」本周规则更新</div>
+              <div class="compact-summary">新增随机障碍格，路径规划需要预留备用方案，难度略有提升。</div>
+            </div>
+          </div>
+          <div class="compact-item">
+            <div class="compact-index">03</div>
+            <div class="compact-body">
+              <div class="compact-name">三队接力对抗赛开放周末场次</div>
+              <div class="compact-summary">周六与周日各增加一场，积分独立计算，方便周末连看。</div>
+            </div>
+          </div>
+          <div class="compact-item">
+            <div class="compact-index">04</div>
+            <div class="compact-body">
+              <div class="compact-name">技巧展示系列新增慢镜头解说</div>
+              <div class="compact-summary">在原有画面基础上加入要点标注，适合新手理解动作细节。</div>
+            </div>
+          </div>
+          <div class="compact-item">
+            <div class="compact-index">05</div>
+            <div class="compact-body">
+              <div class="compact-name">山地速降计时赛调整出发顺序</div>
+              <div class="compact-summary">改为按预赛成绩倒序出发，增加后半程的对抗悬念。</div>
+            </div>
+          </div>
+          <div class="compact-item">
+            <div class="compact-index">06</div>
+            <div class="compact-body">
+              <div class="compact-name">逻辑链条接龙赛增加观众投票环节</div>
+              <div class="compact-summary">在关键节点开放观众选择分支，让结果更具不确定性。</div>
+            </div>
+          </div>
+          <div class="compact-item">
+            <div class="compact-index">07</div>
+            <div class="compact-body">
+              <div class="compact-name">每日大赛91新增「通勤速看」筛选</div>
+              <div class="compact-summary">可按单场时长筛选15分钟以内的赛程，方便通勤时快速浏览。</div>
+            </div>
+          </div>
+          <div class="compact-item">
+            <div class="compact-index">08</div>
+            <div class="compact-body">
+              <div class="compact-name">夜间赛程整体提前半小时</div>
+              <div class="compact-summary">部分夜间场次开赛时间调整，减少深夜等待，具体以当日列表为准。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section id="category-entry" class="content-section">
+        <h2 class="section-title">分类入口</h2>
+        <p class="section-sub">按竞赛方向快速定位，点击进入对应赛程列表。</p>
+        <div class="category-grid">
+          <a href="/#hot-recommend" class="category-item">竞速挑战</a>
+          <a href="/#hot-recommend" class="category-item">逻辑解谜</a>
+          <a href="/#hot-recommend" class="category-item">团队对抗</a>
+          <a href="/#hot-recommend" class="category-item">技巧展示</a>
+          <a href="/#hot-recommend" class="category-item">计时赛</a>
+          <a href="/#hot-recommend" class="category-item">积分赛</a>
+          <a href="/#hot-recommend" class="category-item">单人挑战</a>
+          <a href="/#hot-recommend" class="category-item">多人同屏</a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section id="deep-dive" class="content-section deep-dive">
+        <h2 class="section-title">深度解析</h2>
+        <h3>每日大赛91的内容组织逻辑</h3>
+        <p>每日大赛91并不按单一赛事的完整回放来组织，而是把一天内不同方向、不同时段的竞赛条目放在同一视图中。这样做的好处是，观众不需要提前记住固定频道或固定时间，只要打开页面就能看到当天可看的赛程。页面中的推荐顺序参考了更新频率、近期关注度和单场时长，但每条赛程都保留独立的类型标签和场景标签，方便你按自己的习惯筛选。</p>
+        <p>从内容类型上看，竞速挑战通常节奏更快、视觉变化更明显；逻辑解谜偏向静态画面与规则推演；团队对抗则适合较长时间观看，因为需要理解队伍之间的积分变化。每日大赛91在分类入口中把这几类并列展示，而不是按热度混排，目的是让不同偏好的观众都能快速定位到自己关心的方向。</p>
+
+        <h3>竞速与解谜方向的差异</h3>
+        <p>如果你经常在通勤路上观看，竞速挑战和短局制解谜更合适，因为单场时长通常控制在10到20分钟，不需要连续追看。团队对抗和积分赛更适合周末或晚间有完整时间段的时候，因为需要跟随多轮进程才能理解排名变化。每日大赛91在卡片上标注了“通勤可看”“周末连看”等场景标签，正是为了减少选择成本。</p>
+        <ul>
+          <li><strong>竞速挑战：</strong>重点在路线选择、节奏控制和瞬间反应，画面变化快，适合碎片时间。</li>
+          <li><strong>逻辑解谜：</strong>重点在规则理解和路径推演，画面相对稳定，适合午间或睡前安静观看。</li>
+          <li><strong>团队对抗：</strong>重点在积分策略和队伍配合，需要连续观看多轮，适合周末整段投入。</li>
+          <li><strong>技巧展示：</strong>重点在动作拆解和细节呈现，节奏偏慢，适合放松时观看。</li>
+        </ul>
+
+        <h3>每日大赛91与同类聚合页的对比角度</h3>
+        <p>与一些以实时比分或专业数据为主的竞赛页面相比，每日大赛91更强调“每日可看”和“按场景筛选”。它不提供复杂的统计图表或历史数据库，而是把重点放在当天有哪些赛程、各自适合什么时间观看、大概需要多少时间。对于只想在通勤或休息时找点内容看的观众来说，这种组织方式更直接。如果你需要完整赛果或专业分析，可能需要结合其他页面使用。</p>
+        <p>另一个差异是更新节奏。每日大赛91的推荐列表和最新动态按日调整，部分栏目会在当天不同时段有内容变化。这意味着你不需要频繁刷新，但也不适合把它当作长期存档来使用。页面中的示例数据仅用于展示结构，实际内容以你访问时看到的条目为准。</p>
+
+        <h3>如何判断一个赛程是否适合自己</h3>
+        <p>可以先看类型标签和场景标签：类型标签告诉你这是竞速、解谜还是团队对抗；场景标签提示单场时长和观看节奏。再看卡片上的简短看点，了解本场是否有规则变化或特殊环节。最后参考更新时间，确认是否在你能观看的时间段内。每日大赛91的深度解析板块并不替代具体赛程说明，而是帮助你建立一套快速筛选的方法。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section id="experience-guide" class="content-section">
+        <h2 class="section-title">体验指南</h2>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="guide-step-text"><strong>浏览热门推荐：</strong>首屏下方的卡片区按近期关注度排列，每张卡片都带类型标签和场景标签，可快速判断是否适合自己。</div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-text"><strong>使用分类筛选：</strong>左侧栏提供竞速、解谜、团队、技巧等类型按钮，点击后页面会筛选出对应赛程；再次点击「全部」恢复完整列表。</div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-text"><strong>查看最新动态：</strong>紧凑列表按时间顺序展示规则变化、场次调整和新增内容，适合快速了解当天有哪些变化。</div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-text"><strong>移动端适配：</strong>在手机上左右侧栏会收起，频道导航变为横向滚动条，主内容保持完整可读，搜索框仍然可用。</div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-text"><strong>使用站内搜索：</strong>在顶部搜索框输入赛程名称或类型关键词，页面会高亮并筛选匹配卡片；若无匹配结果，会显示提示信息。</div>
+          </div>
+          <div class="guide-step">
+            <div class="guide-step-text"><strong>延伸阅读：</strong>右栏提供页内目录与热门条目，可与中栏内容配合使用，方便在长页面中快速跳转。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section id="faq" class="content-section">
+        <h2 class="section-title">常见问题</h2>
+        <div class="faq-list">
+          <details>
+            <summary>每日大赛91适合什么人看？</summary>
+            <div class="faq-answer">适合习惯每天找短时竞赛内容观看的观众，尤其是通勤、午休或睡前有碎片时间的人。页面按类型和场景组织赛程，不需要专业背景也能快速挑选。</div>
+          </details>
+          <details>
+            <summary>每日大赛91一般多久更新一次？</summary>
+            <div class="faq-answer">推荐列表和最新动态按日更新，部分场次会在当天不同时段调整。页面不承诺固定刷新频率，建议在常看时段打开查看当日内容。</div>
+          </details>
+          <details>
+            <summary>竞速挑战和逻辑解谜哪个更适合通勤看？</summary>
+            <div class="faq-answer">两者都可以，但侧重点不同。竞速挑战单场时长更短、画面变化快；逻辑解谜节奏平稳、不需要连续关注。通勤时建议优先选择标注「通勤可看」的单场15分钟以内条目。</div>
+          </details>
+          <details>
+            <summary>每日大赛91和同类赛事聚合页有什么区别？</summary>
+            <div class="faq-answer">它更强调每日可看和场景筛选，不提供复杂的历史数据或专业统计。如果你需要快速决定今天看什么，这个页面的组织方式更直接；如果需要完整赛果或深度数据，建议结合其他来源。</div>
+          </details>
+          <details>
+            <summary>页面上的赛程可以按类型筛选吗？</summary>
+            <div class="faq-answer">可以。左侧栏提供了竞速、解谜、团队、技巧等类型按钮，点击后热门推荐区会显示对应类型的卡片。再次点击「全部」可恢复完整列表。</div>
+          </details>
+          <details>
+            <summary>观看夜间赛程需要提前准备什么？</summary>
+            <div class="faq-answer">夜间赛程通常开赛较晚，建议先确认单场时长和结束时间。页面会在卡片上标注开赛时间，部分条目会注明是否适合睡前观看。不需要额外注册或登录即可浏览。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section id="user-comments" class="content-section">
+        <h2 class="section-title">用户评论</h2>
+        <div class="comment-list">
+          <div class="comment-item">
+            <div class="comment-avatar">林</div>
+            <div class="comment-body">
+              <div class="comment-name">林间小径</div>
+              <div class="comment-text">通勤路上看短局竞速刚好，15分钟一场，到站正好结束。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">陈</div>
+            <div class="comment-body">
+              <div class="comment-name">陈默</div>
+              <div class="comment-text">解谜类的难度标注能不能再细一点？有些标着通勤可看，实际要思考挺久。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">张</div>
+            <div class="comment-body">
+              <div class="comment-name">张望远方</div>
+              <div class="comment-text">周末连看团队对抗很合适，积分变化比单场竞速更有追看感。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">王</div>
+            <div class="comment-body">
+              <div class="comment-name">王小明</div>
+              <div class="comment-text">搜索功能挺实用，直接输「迷宫」就能筛出来，不用翻半天。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">赵</div>
+            <div class="comment-body">
+              <div class="comment-name">赵四</div>
+              <div class="comment-text">夜间场次要是能再早半小时就好了，有时候等到九点半有点晚。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">周</div>
+            <div class="comment-body">
+              <div class="comment-name">周舟</div>
+              <div class="comment-text">技巧展示的慢镜头解说对新手很友好，能看清动作顺序。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">吴</div>
+            <div class="comment-body">
+              <div class="comment-name">吴所谓</div>
+              <div class="comment-text">页面挺清爽，没有太多弹窗和跳转，点开就能看赛程列表。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">郑</div>
+            <div class="comment-body">
+              <div class="comment-name">郑好</div>
+              <div class="comment-text">希望分类里加一个「短时赛」筛选，按分钟数排更直接。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">孙</div>
+            <div class="comment-body">
+              <div class="comment-name">孙一</div>
+              <div class="comment-text">午休看逻辑接龙刚好，节奏紧凑，一局接一局也不腻。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">李</div>
+            <div class="comment-body">
+              <div class="comment-name">李子树</div>
+              <div class="comment-text">最新动态更新挺勤，场次调整能看到通知，不用自己猜。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">刘</div>
+            <div class="comment-body">
+              <div class="comment-name">刘流</div>
+              <div class="comment-text">手机上看导航栏要横滑，稍微有点不习惯，不过内容没缩水。</div>
+            </div>
+          </div>
+          <div class="comment-item">
+            <div class="comment-avatar">黄</div>
+            <div class="comment-body">
+              <div class="comment-name">黄小跑</div>
+              <div class="comment-text">竞速和山地速降都挺带感，就是有时候两个都想看，时间撞了。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section id="related-news" class="content-section">
+        <h2 class="section-title">相关资讯</h2>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-date">2025-03-18</div>
+            <div class="news-body">
+              <div class="news-title">夜间竞速赛段照明方案调整</div>
+              <div class="news-summary">部分夜间场次将增加辅助照明区域，以减少视线盲区，具体以当日赛程说明为准。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-03-17</div>
+            <div class="news-body">
+              <div class="news-title">逻辑解谜类新增随机规则机制</div>
+              <div class="news-summary">本周起部分解谜场次会在中途加入规则微调，考验临场适应能力。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-03-16</div>
+            <div class="news-body">
+              <div class="news-title">团队对抗积分计算方式说明</div>
+              <div class="news-summary">三队接力赛采用分轮积分制，每轮名次对应不同积分，最终按总分排序。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-03-15</div>
+            <div class="news-body">
+              <div class="news-title">技巧展示系列加入多角度回放</div>
+              <div class="news-summary">新增侧面与俯视角度切换，方便观察动作细节与空间位置关系。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-03-14</div>
+            <div class="news-body">
+              <div class="news-title">周末场次时间表优化</div>
+              <div class="news-summary">周末团队对抗与积分赛的开赛间隔缩短，方便连续观看多场。</div>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-03-13</div>
+            <div class="news-body">
+              <div class="news-title">每日大赛91新增场景筛选标签</div>
+              <div class="news-summary">在原有类型标签基础上增加通勤、睡前、周末等场景提示，便于按观看习惯选择。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 / 标签索引 -->
+      <section id="tag-index" class="content-section">
+        <h2 class="section-title">方向索引</h2>
+        <p class="section-sub">按可搜索的具体内容方向整理，点击可跳转至对应内容区。</p>
+        <div class="tag-index">
+          <a href="/#hot-recommend">城市环线竞速</a>
+          <a href="/#hot-recommend">数字迷宫解谜</a>
+          <a href="/#hot-recommend">三队接力对抗</a>
+          <a href="/#hot-recommend">精准落点技巧</a>
+          <a href="/#hot-recommend">山地速降计时</a>
+          <a href="/#hot-recommend">逻辑链条接龙</a>
+          <a href="/#latest-updates">夜间赛段更新</a>
+          <a href="/#latest-updates">通勤速看筛选</a>
+          <a href="/#deep-dive">竞速与解谜差异</a>
+          <a href="/#deep-dive">团队积分策略</a>
+        </div>
+      </section>
+
+      <!-- 11. 精选内容 / 引语卡 -->
+      <section id="editor-pick" class="content-section">
+        <h2 class="section-title">精选内容</h2>
+        <div class="quote-block">
+          “每日大赛91把‘今天看什么’这件事拆得比较清楚——先看类型，再看时长，最后看时间是否合适。对于不想花太多时间做选择的人来说，这种结构比一堆排行榜更实用。”
+          <div class="quote-source">—— 长期观看竞速与解谜内容的观众反馈</div>
+        </div>
+        <div style="margin-top:16px; font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+          <p>精选内容板块不重复热门推荐中的具体条目，而是从观看决策的角度提供补充。如果你已经浏览过前面的赛程卡片，可以把这里当作一个简短的总结：先确认自己有多少时间，再按类型缩小范围，最后用场景标签确认节奏是否匹配。每日大赛91的页面结构支持这种快速筛选，不需要逐条点开详情。</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="right-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">页内目录</div>
+        <ul class="toc-list">
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#hot-recommend">热门内容推荐</a></li>
+          <li><a href="/#latest-updates">最新更新与动态</a></li>
+          <li><a href="/#category-entry">分类入口</a></li>
+          <li><a href="/#deep-dive">深度解析</a></li>
+          <li><a href="/#experience-guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#user-comments">用户评论</a></li>
+          <li><a href="/#related-news">相关资讯</a></li>
+          <li><a href="/#tag-index">方向索引</a></li>
+          <li><a href="/#editor-pick">精选内容</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">热门条目</div>
+        <div class="hot-list">
+          <div class="hot-item">
+            <div class="hot-rank top">1</div>
+            <div class="hot-name">城市环线竞速夜场</div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-rank top">2</div>
+            <div class="hot-name">三队接力对抗赛</div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-rank top">3</div>
+            <div class="hot-name">数字迷宫限时解谜</div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-rank">4</div>
+            <div class="hot-name">山地速降计时赛</div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-rank">5</div>
+            <div class="hot-name">逻辑链条接龙赛</div>
+          </div>
+          <div class="hot-item">
+            <div class="hot-rank">6</div>
+            <div class="hot-name">精准落点技巧展示</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">延伸阅读</div>
+        <ul class="sidebar-links">
+          <li><a href="/#deep-dive">竞速与解谜的观看节奏差异</a></li>
+          <li><a href="/#deep-dive">团队积分赛的追看要点</a></li>
+          <li><a href="/#experience-guide">如何用场景标签筛选</a></li>
+          <li><a href="/#faq">夜间场次安排说明</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>每日大赛91</h2>
+        <p>每日竞赛内容聚合与观赛入口，按类型、场景与时间组织当天可看的赛程，适合通勤、午间与睡前快速挑选。</p>
+      </div>
+      <div class="footer-col">
+        <h3>频道</h3>
+        <a href="/#hot-recommend">热门推荐</a>
+        <a href="/#latest-updates">最新动态</a>
+        <a href="/#category-entry">分类入口</a>
+        <a href="/#deep-dive">深度解析</a>
+      </div>
+      <div class="footer-col">
+        <h3>方向</h3>
+        <a href="/#hot-recommend">竞速挑战</a>
+        <a href="/#hot-recommend">逻辑解谜</a>
+        <a href="/#hot-recommend">团队对抗</a>
+        <a href="/#hot-recommend">技巧展示</a>
+      </div>
+      <div class="footer-col">
+        <h3>帮助</h3>
+        <a href="/#experience-guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#user-comments">用户评论</a>
+        <a href="/#related-news">相关资讯</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 每日大赛91 · 页面结构示例</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      // 分类筛选
+      const filterTags = document.querySelectorAll('.filter-tag[data-filter]');
+      const hotCards = document.querySelectorAll('#hotCardGrid .content-card');
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const searchFeedback = document.getElementById('searchFeedback');
+
+      let currentFilter = 'all';
+
+      function applyFilterAndSearch() {
+        const query = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+        hotCards.forEach(card => {
+          const type = card.getAttribute('data-type') || '';
+          const cardText = card.textContent.toLowerCase();
+          const matchesFilter = currentFilter === 'all' || type === currentFilter;
+          const matchesSearch = query === '' || cardText.includes(query);
+          if (matchesFilter && matchesSearch) {
+            card.classList.remove('hidden-by-search');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden-by-search');
+          }
+        });
+
+        if (query !== '') {
+          searchFeedback.textContent = visibleCount > 0
+            ? `找到 ${visibleCount} 个与“${searchInput.value.trim()}”相关的赛程`
+            : `没有找到与“${searchInput.value.trim()}”匹配的赛程，试试其他关键词或切换类型`;
+          searchFeedback.classList.add('visible');
+        } else {
+          searchFeedback.classList.remove('visible');
+        }
+      }
+
+      filterTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+          filterTags.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          currentFilter = this.getAttribute('data-filter');
+          applyFilterAndSearch();
+        });
+      });
+
+      function handleSearch() {
+        applyFilterAndSearch();
+      }
+
+      searchBtn.addEventListener('click', handleSearch);
+      searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleSearch();
+        }
+      });
+
+      // 点击侧栏“全部”之外的类型按钮与搜索联动
+      // 已实现
+
+      // 键盘焦点可见
+      // 无额外操作
+
+      // 确保锚点目标存在
+      // 所有 /# 链接均有唯一 id 目标
+    })();
+  </script>
+</body>
+            </html>
